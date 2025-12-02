@@ -48,8 +48,21 @@ function changeTheme(scrollPos) {
             pc.style.borderColor = "#ffffff";
             pc.style.color = "#000000ff";
         });
-    } else if (scrollPos > 2500) {
+    } else if (scrollPos > 2500 && scrollPos <= 3000) {
         document.body.style.backgroundImage = "url('images/droneBackground.jpg')";
+        cards.forEach(card => {
+            card.style.backgroundColor = "rgba(61, 61, 61, 0.75)";
+            card.style.borderColor = ""; // white border
+            card.style.color = "";
+        });
+
+        projectCard.forEach(pc => {
+            pc.style.backgroundColor = "";
+            pc.style.borderColor = "#ffffff";
+            pc.style.color = "#000000ff";
+        });
+    } else if (scrollPos > 3000) {
+        document.body.style.backgroundImage = "url('images/sponsorbanner.png')";
         cards.forEach(card => {
             card.style.backgroundColor = "rgba(61, 61, 61, 0.75)";
             card.style.borderColor = ""; // white border
