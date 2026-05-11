@@ -33,6 +33,9 @@ body {
     min-height: 100vh;
 }
 
+a{
+    text-decoration: none;
+}
 .header {
     position: fixed;
     top: 0;
@@ -165,7 +168,7 @@ body {
 .desc {
     color: white;
     text-align: center;
-    padding-top: 10%;
+    padding-top: 8em;
     font-family: MiSansLight;
 font-size:200%;
 }
@@ -175,7 +178,7 @@ font-size:200%;
 }
 
 .project_section{
-    padding-top:10vh;
+    padding:10vh;
 }
 .project_grid{
     display: grid;
@@ -186,7 +189,7 @@ font-size:200%;
 }
 .project_page{
     padding: 3em;
-    border-radius:0 2em 2em 0;
+    border-radius:2em 2em;
     opacity: 0;
   transform: translateX(-100%);
   animation: slide-in ease-out forwards;
@@ -196,6 +199,7 @@ font-size:200%;
   -webkit-backdrop-filter: blur(12px);
   width:80%;
 transition:0.8s;
+margin-left:3em;
 }
 .project_page:hover{
     width:90%;
@@ -226,6 +230,38 @@ transition:0.8s;
 .project_image{
     width: 15vw;
 }
+
+.project_intro{
+    width:27vw;
+}
+.tech-grid {
+            display: grid;
+
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        }
+
+
+        .tech-item {
+            aspect-ratio: 1 / 1; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .tech-item i {
+            font-size: 40px; 
+        }
+
+
+        .tech-item i.colored {
+            filter: grayscale(0.2); 
+        }
+
+        .grey-icon i {
+            color: #999999 !important;
+            filter: none !important;
+        }
 /* Animations */
 @keyframes blink-caret {
     from, to { border-color: transparent }
