@@ -77,8 +77,8 @@ let ticking = false;
 
 
 function changeTheme(scrollPos) {
-    const cards = document.querySelectorAll(".card"); // get all cards
-    const projectCard = document.querySelectorAll(".projectCard");
+    const cards = document.querySelectorAll(".project_intro"); // get all cards
+    const projectCard = document.querySelectorAll(".project_page");
     if (scrollPos > 500 && scrollPos <= 2500) {
         document.body.style.backgroundImage = "url('images/programmador.jpg')";
         cards.forEach(card => {
