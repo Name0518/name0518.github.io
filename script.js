@@ -13,8 +13,7 @@
       nav_models: "3D Models",
       nav_languages: "Languages",
       menu_open: "Open menu",
-      lang_switch: "中文",
-      lang_switch_aria: "Switch to Chinese",
+      lang_switch_aria: "Switch language",
       bubble1_intro: "Hello, my name is...",
       bubble2_intro: "I am a...",
       role_dev: "Software Developer",
@@ -47,8 +46,7 @@
       nav_models: "3D 模型",
       nav_languages: "语言",
       menu_open: "打开菜单",
-      lang_switch: "English",
-      lang_switch_aria: "切换到英文",
+      lang_switch_aria: "切换语言",
       bubble1_intro: "你好，我叫……",
       bubble2_intro: "我是……",
       role_dev: "软件开发者",
@@ -104,6 +102,12 @@
       var key = el.getAttribute("data-i18n-aria");
       if (dict[key] != null) el.setAttribute("aria-label", dict[key]);
     });
+
+    var toggle = document.querySelector("[data-lang-toggle]");
+    if (toggle) {
+      toggle.setAttribute("data-lang", lang);
+      toggle.setAttribute("aria-checked", lang === "en" ? "true" : "false");
+    }
   }
 
   function initI18n() {

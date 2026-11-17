@@ -61,9 +61,21 @@
           ><i class="fa-brands fa-instagram"></i
         ></a>
       </div>
-      <button class="lang-toggle" type="button" data-lang-toggle aria-label="切换语言" data-i18n-aria="lang_switch_aria">
-        <i class="ti ti-world" aria-hidden="true"></i>
-        <span data-i18n="lang_switch">中文</span>
+      <button
+        class="lang-toggle"
+        type="button"
+        data-lang-toggle
+        data-lang="en"
+        role="switch"
+        aria-checked="true"
+        aria-label="切换语言"
+        data-i18n-aria="lang_switch_aria"
+      >
+        <span class="lang-toggle__labels" aria-hidden="true">
+          <span class="lang-toggle__label lang-toggle__label--zh">中</span>
+          <span class="lang-toggle__label lang-toggle__label--en">EN</span>
+        </span>
+        <span class="lang-toggle__thumb" aria-hidden="true"></span>
       </button>
       <button class="nav-toggle" type="button" aria-label="打开菜单" data-i18n-aria="menu_open" aria-expanded="false" aria-controls="navbar">
         <span></span>
