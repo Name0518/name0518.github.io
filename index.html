@@ -36,10 +36,10 @@
     <header class="header">
       <a href="#main" class="logo">Koumatsu-Sensei</a>
       <nav class="navbar" id="navbar" aria-label="主导航">
-        <a href="#code">Code</a>
-        <a href="#photography">Photography</a>
-        <a href="#">3D Models</a>
-        <a href="#">Languages</a>
+        <a href="#code" data-i18n="nav_code">Code</a>
+        <a href="#photography" data-i18n="nav_photography">Photography</a>
+        <a href="#" data-i18n="nav_models">3D Models</a>
+        <a href="#" data-i18n="nav_languages">Languages</a>
       </nav>
       <div class="socials">
         <a href="https://github.com/Name0518" target="_blank" aria-label="GitHub"
@@ -61,7 +61,11 @@
           ><i class="fa-brands fa-instagram"></i
         ></a>
       </div>
-      <button class="nav-toggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="navbar">
+      <button class="lang-toggle" type="button" data-lang-toggle aria-label="切换语言" data-i18n-aria="lang_switch_aria">
+        <i class="ti ti-world" aria-hidden="true"></i>
+        <span data-i18n="lang_switch">中文</span>
+      </button>
+      <button class="nav-toggle" type="button" aria-label="打开菜单" data-i18n-aria="menu_open" aria-expanded="false" aria-controls="navbar">
         <span></span>
         <span></span>
         <span></span>
@@ -72,7 +76,7 @@
       <section class="mainLanding" id="main">
         <div class="bubble1">
           <div class="bubble1_intro">
-            <h1>Hello, my name is...</h1>
+            <h1 data-i18n="bubble1_intro">Hello, my name is...</h1>
           </div>
           <div class="bubble1_desc">
             <h2 class="name_en">William</h2>
@@ -83,28 +87,28 @@
 
         <div class="bubble2">
           <div class="bubble2_intro">
-            <h1>I am a...</h1>
+            <h1 data-i18n="bubble2_intro">I am a...</h1>
           </div>
           <div class="bubble2_desc">
-            <h2><a href="#code">Software Developer</a></h2>
-            <h2><a href="#photography">Photographer</a></h2>
-            <h2><a href="#">3D Modeller</a></h2>
-            <h2><a href="#">Language Learner</a></h2>
+            <h2><a href="#code" data-i18n="role_dev">Software Developer</a></h2>
+            <h2><a href="#photography" data-i18n="role_photo">Photographer</a></h2>
+            <h2><a href="#" data-i18n="role_3d">3D Modeller</a></h2>
+            <h2><a href="#" data-i18n="role_lang">Language Learner</a></h2>
           </div>
         </div>
 
-        <p class="desc reveal">永远相信，美好的事情即将发生</p>
+        <p class="desc reveal" data-i18n="tagline">永远相信，美好的事情即将发生</p>
       </section>
 
       <section class="project_section" id="code">
         <div class="project_grid project_grid--code">
           <div class="project_intro reveal">
-            <h1 class="intro_text">个人项目简介</h1>
+            <h1 class="intro_text" data-i18n="code_title">个人项目简介</h1>
             <div class="white-line"></div>
-            <p class="intro-desc">
+            <p class="intro-desc" data-i18n="code_desc">
               其中包含了高中至今值得一提的所有项目，观赏性不大，主打一个朴实无华。
             </p>
-            <h2 class="intro-sub">常用技术</h2>
+            <h2 class="intro-sub" data-i18n="code_tech">常用技术</h2>
             <div class="tech-grid">
               <div class="tech-item"><i class="devicon-java-plain colored"></i></div>
               <div class="tech-item"><i class="devicon-html5-plain colored"></i></div>
@@ -132,29 +136,29 @@
 
           <article class="project_page card-commute reveal-left">
             <a href="https://github.com/sogairo/commute-app" target="_blank">
-              <h1>Commute App</h1>
-              <p>Making Commutes Easier</p>
+              <h1 data-i18n="p_commute_t">Commute App</h1>
+              <p data-i18n="p_commute_d">Making Commutes Easier</p>
             </a>
           </article>
 
           <article class="project_page card-vn reveal-left">
             <a href="https://github.com/Name0518/ICSSummative2" target="_blank">
-              <h1>Visual Novel</h1>
-              <p>Fully customization game engine for your visual novels</p>
+              <h1 data-i18n="p_vn_t">Visual Novel</h1>
+              <p data-i18n="p_vn_d">Fully customization game engine for your visual novels</p>
             </a>
           </article>
 
           <article class="project_page card-ai reveal-left">
             <a href="https://github.com/Name0518/langchain_agent_beta" target="_blank">
-              <h1>AI Agent</h1>
-              <p>ReAct agent with RAG, LangGraph and DeepSeek</p>
+              <h1 data-i18n="p_ai_t">AI Agent</h1>
+              <p data-i18n="p_ai_d">ReAct agent with RAG, LangGraph and DeepSeek</p>
             </a>
           </article>
 
           <article class="project_page card-clearpath reveal-left">
             <a href="https://github.com/tiwi28/ClearPath" target="_blank">
-              <h1>ClearPath</h1>
-              <p>Accessible Toronto trip planner for wheelchair users</p>
+              <h1 data-i18n="p_clear_t">ClearPath</h1>
+              <p data-i18n="p_clear_d">Accessible Toronto trip planner for wheelchair users</p>
             </a>
           </article>
         </div>
@@ -163,12 +167,12 @@
       <section class="project_section" id="photography">
         <div class="project_grid project_grid--photos">
           <div class="project_intro reveal">
-            <h1 class="intro_text">摄影合集</h1>
+            <h1 class="intro_text" data-i18n="photo_title">摄影合集</h1>
             <div class="white-line"></div>
-            <p class="intro-desc">
+            <p class="intro-desc" data-i18n="photo_desc">
               平平无奇的爱好，没钱买新机，没风景找灵感，全是技巧，构图，以及我对这片土地的爱与探索欲。
             </p>
-            <h2 class="intro-sub">常用设备</h2>
+            <h2 class="intro-sub" data-i18n="photo_devices">常用设备</h2>
             <div class="device_page">
               <div class="device device-camera"></div>
               <div class="device device-drone"></div>
@@ -183,7 +187,7 @@
       </section>
 
       <section class="end" id="contact">
-        <h1 class="endtext reveal">有兴趣可以联系：</h1>
+        <h1 class="endtext reveal" data-i18n="contact_title">有兴趣可以联系：</h1>
         <div class="contact_list">
           <div class="contact-icons reveal">
             <a href="https://github.com/Name0518" target="_blank" aria-label="GitHub" class="icon"
@@ -211,7 +215,7 @@
       </section>
 
       <footer class="footer">
-        <p>&copy; 2026 Koumatsu-Sensei. 保留所有权利。</p>
+        <p data-i18n="footer">&copy; 2026 Koumatsu-Sensei. 保留所有权利。</p>
       </footer>
     </main>
 

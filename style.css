@@ -243,6 +243,36 @@ a {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* Language toggle */
+.lang-toggle {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 999px;
+  background: transparent;
+  color: #222;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+.lang-toggle i {
+  font-size: 1rem;
+}
+.lang-toggle:hover {
+  background: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.lang-toggle:focus-visible {
+  outline: 2px solid var(--accent-3);
+  outline-offset: 2px;
+}
+
 /* ---- Landing --------------------------------------------------------------- */
 .mainLanding {
   min-height: 100vh;
@@ -728,13 +758,14 @@ html.js .reveal,
 html.js .reveal-left {
   opacity: 0;
   transition: opacity 0.8s var(--ease-out) var(--d, 0ms),
-    transform 0.8s var(--ease-out) var(--d, 0ms);
+    transform 0.8s var(--ease-out) var(--d, 0ms), box-shadow 0.45s var(--ease-out),
+    border-color 0.45s var(--ease-out);
 }
 html.js .reveal {
   transform: translateY(28px);
 }
 html.js .reveal-left {
-  transform: translateX(-36px);
+  transform: translateY(22px);
 }
 html.js .reveal.show,
 html.js .reveal-left.show {
@@ -778,9 +809,13 @@ html.js .reveal-left.show {
   .logo {
     order: 1;
     flex: 1 1 auto;
+    font-size: 1.15rem;
+  }
+  .lang-toggle {
+    order: 2;
   }
   .nav-toggle {
-    order: 2;
+    order: 3;
     display: flex;
   }
   .navbar,
@@ -788,7 +823,7 @@ html.js .reveal-left.show {
     display: none;
   }
   .navbar {
-    order: 3;
+    order: 4;
     flex-basis: 100%;
     flex-direction: column;
     align-items: flex-start;
@@ -800,7 +835,7 @@ html.js .reveal-left.show {
     padding: 0.65rem 0.25rem;
   }
   .socials {
-    order: 4;
+    order: 5;
     flex-basis: 100%;
     gap: 0.6rem;
     padding: 0.3rem 0 0.75rem;
