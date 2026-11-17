@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Koumatsu-Sensei Official</title>
+    <link rel="icon" href="images/icon.ico" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link
       rel="stylesheet"
@@ -12,7 +16,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="icon" href="images/icon.ico" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -25,35 +28,47 @@
   </head>
 
   <body>
-    <div class="blur">
-      <header class="header">
-        <a href="#main" class="logo">Koumatsu-Sensei</a>
-        <nav class="navbar">
-          <a href="#code">Code</a>
-          <a href="#">Photography</a>
-          <a href="#">3D Models</a>
-          <a href="#">Languages</a>
-        </nav>
-        <div class="socials">
-          <a href="https://github.com/Name0518" target="_blank"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-          <a
-            href="https://space.bilibili.com/1277170853?spm_id_from=333.1007.0.0"
-            target="_blank"
-            ><i class="fa-brands fa-bilibili"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/william-tang-ab1366288"
-            target="_blank"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-          <a href="https://www.instagram.com/fv4005isbad" target="_blank"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-        </div>
-      </header>
+    <div class="bg" aria-hidden="true">
+      <div class="bg__layer is-active" style="background-image: url(&quot;images/main.jpg&quot;)"></div>
+      <div class="bg__layer"></div>
+    </div>
 
+    <header class="header">
+      <a href="#main" class="logo">Koumatsu-Sensei</a>
+      <nav class="navbar" id="navbar" aria-label="主导航">
+        <a href="#code">Code</a>
+        <a href="#photography">Photography</a>
+        <a href="#">3D Models</a>
+        <a href="#">Languages</a>
+      </nav>
+      <div class="socials">
+        <a href="https://github.com/Name0518" target="_blank" aria-label="GitHub"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          href="https://space.bilibili.com/1277170853?spm_id_from=333.1007.0.0"
+          target="_blank"
+          aria-label="Bilibili"
+          ><i class="fa-brands fa-bilibili"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/william-tang-ab1366288"
+          target="_blank"
+          aria-label="LinkedIn"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="https://www.instagram.com/fv4005isbad" target="_blank" aria-label="Instagram"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="navbar">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main class="site">
       <section class="mainLanding" id="main">
         <div class="bubble1">
           <div class="bubble1_intro">
@@ -72,57 +87,35 @@
           </div>
           <div class="bubble2_desc">
             <h2><a href="#code">Software Developer</a></h2>
-            <h2><a href="#">Photographer</a></h2>
+            <h2><a href="#photography">Photographer</a></h2>
             <h2><a href="#">3D Modeller</a></h2>
             <h2><a href="#">Language Learner</a></h2>
           </div>
         </div>
 
-        <p class="desc">永远相信，美好的事情即将发生</p>
+        <p class="desc reveal">永远相信，美好的事情即将发生</p>
       </section>
 
-      <section class="project_section">
-        <div class="project_grid">
-          <div class="project_intro" style="grid-area: 1 / 4 / 7 / 6">
+      <section class="project_section" id="code">
+        <div class="project_grid project_grid--code">
+          <div class="project_intro reveal">
             <h1 class="intro_text">个人项目简介</h1>
             <div class="white-line"></div>
-            <p style="color: white; font-family: MiSansLight; font-size: 20px">
+            <p class="intro-desc">
               其中包含了高中至今值得一提的所有项目，观赏性不大，主打一个朴实无华。
             </p>
-            <h2 style="font-size: 2em; color: white; margin-top: 20px">
-              常用技术
-            </h2>
+            <h2 class="intro-sub">常用技术</h2>
             <div class="tech-grid">
-              <div class="tech-item">
-                <i class="devicon-java-plain colored"></i>
-              </div>
-              <div class="tech-item">
-                <i class="devicon-html5-plain colored"></i>
-              </div>
-              <div class="tech-item">
-                <i class="devicon-c-plain colored"></i>
-              </div>
-              <div class="tech-item">
-                <i class="devicon-css3-plain colored"></i>
-              </div>
-              <div class="tech-item">
-                <i class="devicon-docker-plain colored"></i>
-              </div>
-              <div class="tech-item">
-                <i class="devicon-javascript-plain colored"></i>
-              </div>
-              <div class="tech-item">
-                <i class="devicon-python-plain colored"></i>
-              </div>
-              <div class="tech-item grey-icon">
-                <i class="devicon-threejs-original"></i>
-              </div>
-              <div class="tech-item">
-                <i class="devicon-blender-original colored"></i>
-              </div>
-              <div class="tech-item">
-                <i class="devicon-typescript-plain colored"></i>
-              </div>
+              <div class="tech-item"><i class="devicon-java-plain colored"></i></div>
+              <div class="tech-item"><i class="devicon-html5-plain colored"></i></div>
+              <div class="tech-item"><i class="devicon-c-plain colored"></i></div>
+              <div class="tech-item"><i class="devicon-css3-plain colored"></i></div>
+              <div class="tech-item"><i class="devicon-docker-plain colored"></i></div>
+              <div class="tech-item"><i class="devicon-javascript-plain colored"></i></div>
+              <div class="tech-item"><i class="devicon-python-plain colored"></i></div>
+              <div class="tech-item grey-icon"><i class="devicon-threejs-original"></i></div>
+              <div class="tech-item"><i class="devicon-blender-original colored"></i></div>
+              <div class="tech-item"><i class="devicon-typescript-plain colored"></i></div>
               <div class="tech-item">
                 <img
                   src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/langchain.svg"
@@ -130,168 +123,70 @@
                   class="svg-icon"
                 />
               </div>
-              <div class="tech-item">
-                <i class="devicon-react-original colored"></i>
-              </div>
+              <div class="tech-item"><i class="devicon-react-original colored"></i></div>
               <div class="tech-item"><i class="fa-brands fa-obsidian"></i></div>
-
-              <div class="tech-item">
-                <i class="devicon-fastapi-plain colored"></i>
-              </div>
-              <div class="tech-item">
-                <i class="devicon-huggingface-plain colored"></i>
-              </div>
+              <div class="tech-item"><i class="devicon-fastapi-plain colored"></i></div>
+              <div class="tech-item"><i class="devicon-huggingface-plain colored"></i></div>
             </div>
           </div>
-          <div
-            class="project_page"
-            style="
-              grid-area: 1 / 1 / 3 / 4;
-              background-image:
-                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url(&quot;images/droneBackground.jpg&quot;);
-              background-size: 100%;
-              background-repeat: no-repeat;
-              background-position: center;
-            "
-          >
+
+          <article class="project_page card-commute reveal-left">
             <a href="https://github.com/sogairo/commute-app" target="_blank">
               <h1>Commute App</h1>
               <p>Making Commutes Easier</p>
             </a>
-          </div>
-          <div
-            class="project_page"
-            style="
-              grid-area: 3 / 1 / 5 / 4;
-              background-image:
-                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url(&quot;images/VN.png&quot;);
-              background-size: 100%;
-              background-repeat: no-repeat;
-              background-position: center;
-            "
-          >
+          </article>
+
+          <article class="project_page card-vn reveal-left">
             <a href="https://github.com/Name0518/ICSSummative2" target="_blank">
               <h1>Visual Novel</h1>
               <p>Fully customization game engine for your visual novels</p>
             </a>
-          </div>
+          </article>
 
-          <div
-            class="project_page"
-            style="
-              grid-area: 5 / 1 / 6 / 4;
-              background-image: linear-gradient(
-                135deg,
-                rgba(0, 0, 0, 0.55),
-                rgba(28, 60, 60, 0.75)
-              );
-              background-repeat: no-repeat;
-              background-position: center;
-              padding-top: 10px;
-            "
-          >
-            <a
-              href="https://github.com/Name0518/langchain_agent_beta"
-              target="_blank"
-            >
+          <article class="project_page card-ai reveal-left">
+            <a href="https://github.com/Name0518/langchain_agent_beta" target="_blank">
               <h1>AI Agent</h1>
               <p>ReAct agent with RAG, LangGraph and DeepSeek</p>
             </a>
-          </div>
+          </article>
 
-          <div
-            class="project_page"
-            style="
-              grid-area: 6 / 1 / 7 / 4;
-              background-image: linear-gradient(
-                135deg,
-                rgba(0, 0, 0, 0.55),
-                rgba(28, 60, 60, 0.75)
-              );
-              background-repeat: no-repeat;
-              background-position: center;
-              padding-top: 10px;
-            "
-          >
+          <article class="project_page card-clearpath reveal-left">
             <a href="https://github.com/tiwi28/ClearPath" target="_blank">
               <h1>ClearPath</h1>
               <p>Accessible Toronto trip planner for wheelchair users</p>
             </a>
-          </div>
+          </article>
         </div>
       </section>
 
-      <section class="project_section">
-        <div class="project_grid">
-          <div
-            class="photo_page"
-            style="
-              grid-area: 1 / 3 / 7 / 4;
-              background-image: url(&quot;images/photos/3.jpg&quot;);
-            "
-          ></div>
-          <div
-            class="photo_page"
-            style="
-              grid-area: 1 / 4 / 7 / 5;
-              background-image: url(&quot;images/photos/4.jpg&quot;);
-            "
-          ></div>
-
-          <div
-            class="photo_page"
-            style="
-              grid-area: 1 / 5 / 7 / 6;
-              background-image: url(&quot;images/photos/6.jpg&quot;);
-            "
-          ></div>
-          <div class="project_intro" style="grid-area: 1 / 1 / 7 / 3">
+      <section class="project_section" id="photography">
+        <div class="project_grid project_grid--photos">
+          <div class="project_intro reveal">
             <h1 class="intro_text">摄影合集</h1>
             <div class="white-line"></div>
-            <p style="color: white; font-family: MiSansLight; font-size: 20px">
+            <p class="intro-desc">
               平平无奇的爱好，没钱买新机，没风景找灵感，全是技巧，构图，以及我对这片土地的爱与探索欲。
             </p>
-            <h2 style="font-size: 2em; color: white; margin-top: 20px">
-              常用设备
-            </h2>
+            <h2 class="intro-sub">常用设备</h2>
             <div class="device_page">
-              <div
-                class="device"
-                style="
-                  grid-area: 1 / 1 / 2 / 3;
-                  background-image: url(&quot;images/camera.png&quot;);
-                "
-              ></div>
-              <div
-                class="device"
-                style="
-                  grid-area: 2 / 1 / 3 / 3;
-                  background-image: url(&quot;images/djimini.png&quot;);
-                "
-              ></div>
-              <div
-                class="device"
-                style="
-                  grid-area: 1 / 3 / 3 / 4;
-                  background-image: url(&quot;images/huawei.png&quot;);
-                "
-              ></div>
+              <div class="device device-camera"></div>
+              <div class="device device-drone"></div>
+              <div class="device device-phone"></div>
             </div>
           </div>
+
+          <div class="photo_page photo-a reveal-left"></div>
+          <div class="photo_page photo-b reveal-left"></div>
+          <div class="photo_page photo-c reveal-left"></div>
         </div>
       </section>
-      <section class="end">
-        <h1 class="endtext">有兴趣可以联系：</h1>
-        <br />
+
+      <section class="end" id="contact">
+        <h1 class="endtext reveal">有兴趣可以联系：</h1>
         <div class="contact_list">
-          <div class="contact-icons">
-            <a
-              href="https://github.com/Name0518"
-              target="_blank"
-              aria-label="GitHub"
-              class="icon"
+          <div class="contact-icons reveal">
+            <a href="https://github.com/Name0518" target="_blank" aria-label="GitHub" class="icon"
               ><i class="ti ti-brand-github"></i>Github</a
             >
             <a
@@ -308,20 +203,18 @@
               class="icon"
               ><i class="ti ti-brand-linkedin"></i>Linkedin</a
             >
-            <a
-              href="https://www.instagram.com/fv4005isbad"
-              target="_blank"
-              aria-label="Instagram"
-              class="icon"
+            <a href="https://www.instagram.com/fv4005isbad" target="_blank" aria-label="Instagram" class="icon"
               ><i class="ti ti-brand-instagram"></i>Instagram</a
             >
           </div>
         </div>
       </section>
 
-      <div class="footer">
+      <footer class="footer">
         <p>&copy; 2026 Koumatsu-Sensei. 保留所有权利。</p>
-      </div>
-    </div>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
